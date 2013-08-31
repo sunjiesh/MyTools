@@ -3,11 +3,15 @@
 """
 Module implementing MainWindow.
 """
+import sys
 
+from PyQt4 import QtGui
 from PyQt4.QtGui import QMainWindow
 from PyQt4.QtCore import pyqtSignature
 
 from Ui_MainWin import Ui_MainWindow
+from AlertDialog import AlertDialog
+
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     """
@@ -23,15 +27,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     @pyqtSignature("")
     def on_btnRun_clicked(self):
         """
-        Slot documentation goes here.
+        执行验证操作，读取Source和Pattern，
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
-
-if __name__ == "__main__":
-    import sys
-    from PyQt4 import QtGui
-    app = QtGui.QApplication(sys.argv)
-    MainWindow = MainWindow()
-    MainWindow.show()
-    sys.exit(app.exec_())
+        #读取Source及Pattern
+        textSource=self.textSource.toPlainText()
+        textPattern=self.textPattern.toPlainText()
+        if (textSource !="" and  textPattern!=""):
+            print "textSource="+textSource
+            print "textPattern="+textPattern
+        else:
+                alertDialog = AlertDialog()
+                alertDialog.lblMessage.setText(u"请输入Source及Pattern");
+                alertDialog.open ()
+                alertDialog.exec_()
+                print "请输入Source及Pattern"

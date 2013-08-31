@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file '/home/tom/workspace/MyPythonApplicationA/commonutils-for-python/commonutils/python2/RegexTester/cn/com/sunjiesh/regextester/ui/MainWin.ui'
 #
-# Created: Sat Aug 31 11:54:35 2013
+# Created: Sat Aug 31 13:24:14 2013
 #      by: PyQt4 UI code generator 4.10
 #
 # WARNING! All changes made in this file will be lost!
