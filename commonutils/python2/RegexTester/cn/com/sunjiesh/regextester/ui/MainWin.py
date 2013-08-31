@@ -12,6 +12,7 @@ from PyQt4.QtCore import pyqtSignature
 from Ui_MainWin import Ui_MainWindow
 from AlertDialog import AlertDialog
 
+import re
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     """
@@ -35,7 +36,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if (textSource !="" and  textPattern!=""):
             print "textSource="+textSource
             print "textPattern="+textPattern
+            #Regex验证
+            result=""
+            compileResult = re.findall(r"\w", textSource)
+            if len(compileResult)>0:
+                for resultItem in compileResult:
+                    result=result+resultItem+"\n"
+            else:
+                result="没有找到符合条件的字符串"
+            #result赋值
+            self.textResult.setText(u""+result)
         else:
+                #提示弹出窗口
                 alertDialog = AlertDialog()
                 alertDialog.lblMessage.setText(u"请输入Source及Pattern");
                 alertDialog.open ()
