@@ -42,13 +42,13 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QTextBrowser" name="textBrowser"/>
+      <widget class="QTextBrowser" name="textResult"/>
      </item>
      <item row="0" column="1">
-      <widget class="QTextEdit" name="textEdit"/>
+      <widget class="QTextEdit" name="textSource"/>
      </item>
      <item row="1" column="1">
-      <widget class="QTextEdit" name="textEdit_2"/>
+      <widget class="QTextEdit" name="textPattern"/>
      </item>
      <item row="3" column="0">
       <widget class="QLabel" name="label_3">
@@ -58,7 +58,7 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="btnRun">
        <property name="text">
         <string>Run</string>
        </property>

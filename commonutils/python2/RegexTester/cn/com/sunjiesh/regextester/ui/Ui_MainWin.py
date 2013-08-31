@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file '/home/tom/workspace/MyPythonApplicationA/commonutils-for-python/commonutils/python2/RegexTester/cn/com/sunjiesh/regextester/ui/MainWin.ui'
 #
-# Created: Sat Aug 31 11:46:25 2013
+# Created: Sat Aug 31 11:54:35 2013
 #      by: PyQt4 UI code generator 4.10
 #
 # WARNING! All changes made in this file will be lost!
@@ -42,21 +42,21 @@ class Ui_MainWindow(object):
         self.label_2 = QtGui.QLabel(self.formLayoutWidget)
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.formLayout.setWidget(1, QtGui.QFormLayout.LabelRole, self.label_2)
-        self.textBrowser = QtGui.QTextBrowser(self.formLayoutWidget)
-        self.textBrowser.setObjectName(_fromUtf8("textBrowser"))
-        self.formLayout.setWidget(3, QtGui.QFormLayout.FieldRole, self.textBrowser)
-        self.textEdit = QtGui.QTextEdit(self.formLayoutWidget)
-        self.textEdit.setObjectName(_fromUtf8("textEdit"))
-        self.formLayout.setWidget(0, QtGui.QFormLayout.FieldRole, self.textEdit)
-        self.textEdit_2 = QtGui.QTextEdit(self.formLayoutWidget)
-        self.textEdit_2.setObjectName(_fromUtf8("textEdit_2"))
-        self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.textEdit_2)
+        self.textResult = QtGui.QTextBrowser(self.formLayoutWidget)
+        self.textResult.setObjectName(_fromUtf8("textResult"))
+        self.formLayout.setWidget(3, QtGui.QFormLayout.FieldRole, self.textResult)
+        self.textSource = QtGui.QTextEdit(self.formLayoutWidget)
+        self.textSource.setObjectName(_fromUtf8("textSource"))
+        self.formLayout.setWidget(0, QtGui.QFormLayout.FieldRole, self.textSource)
+        self.textPattern = QtGui.QTextEdit(self.formLayoutWidget)
+        self.textPattern.setObjectName(_fromUtf8("textPattern"))
+        self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.textPattern)
         self.label_3 = QtGui.QLabel(self.formLayoutWidget)
         self.label_3.setObjectName(_fromUtf8("label_3"))
         self.formLayout.setWidget(3, QtGui.QFormLayout.LabelRole, self.label_3)
-        self.pushButton = QtGui.QPushButton(self.formLayoutWidget)
-        self.pushButton.setObjectName(_fromUtf8("pushButton"))
-        self.formLayout.setWidget(2, QtGui.QFormLayout.FieldRole, self.pushButton)
+        self.btnRun = QtGui.QPushButton(self.formLayoutWidget)
+        self.btnRun.setObjectName(_fromUtf8("btnRun"))
+        self.formLayout.setWidget(2, QtGui.QFormLayout.FieldRole, self.btnRun)
         MainWindow.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(MainWindow)
@@ -67,7 +67,7 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Source", None))
         self.label_2.setText(_translate("MainWindow", "Pattern", None))
         self.label_3.setText(_translate("MainWindow", "Result", None))
-        self.pushButton.setText(_translate("MainWindow", "Run", None))
+        self.btnRun.setText(_translate("MainWindow", "Run", None))
 
 
 if __name__ == "__main__":

@@ -20,6 +20,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         QMainWindow.__init__(self, parent)
         self.setupUi(self)
 
+    @pyqtSignature("")
+    def on_btnRun_clicked(self):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        raise NotImplementedError
+
 if __name__ == "__main__":
     import sys
     from PyQt4 import QtGui
