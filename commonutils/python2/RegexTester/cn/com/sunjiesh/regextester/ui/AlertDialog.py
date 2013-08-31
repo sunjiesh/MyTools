@@ -23,7 +23,6 @@ class AlertDialog(QDialog, Ui_Dialog):
     @pyqtSignature("")
     def on_btnConfirm_clicked(self):
         """
-        Slot documentation goes here.
+        关闭Dialog
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        self.setVisible(False)
