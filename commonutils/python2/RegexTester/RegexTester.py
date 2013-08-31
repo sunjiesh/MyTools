@@ -1,4 +1,4 @@
-#/bin/usr/python
+#!/usr/bin/python
 
 from cn.com.sunjiesh.regextester.ui.MainWin import MainWindow
 
