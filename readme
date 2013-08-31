@@ -1,8 +1,1 @@
-正则表达式验证调用
-python commonutils/python2/RegexTester/RegexTester.py 
-
-搜索Jar包示例
-python commonutils/python2/SearchJar/cn/com/sunjiesh/searchjar/SearchJar.py -d/home/tom/.m2/repository/xom -cnu/xom/Builder
-说明
-	-d 目录
-	-c 类路径
+具体参见Wiki
