@@ -38,14 +38,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             print "textPattern="+textPattern
             #Regex验证
             result=""
-            compileResult = re.findall(r"\w", textSource)
+            compileResult = re.findall(r""+str(textPattern), textSource)
             if len(compileResult)>0:
                 for resultItem in compileResult:
                     result=result+resultItem+"\n"
             else:
                 result="没有找到符合条件的字符串"
             #result赋值
-            self.textResult.setText(u""+result)
+            self.textResult.setText(result)
         else:
                 #提示弹出窗口
                 alertDialog = AlertDialog()
