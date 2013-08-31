@@ -34,16 +34,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         textSource=self.textSource.toPlainText()
         textPattern=self.textPattern.toPlainText()
         if (textSource !="" and  textPattern!=""):
+            textSource=unicode(textSource)
+            textPattern=unicode(textPattern)
             print "textSource="+textSource
             print "textPattern="+textPattern
             #Regex验证
             result=""
-            compileResult = re.findall(r""+str(textPattern), textSource)
+            compileResult = re.findall(r""+textPattern, textSource)
             if len(compileResult)>0:
                 for resultItem in compileResult:
                     result=result+resultItem+"\n"
             else:
-                result="没有找到符合条件的字符串"
+                result=u"没有找到符合条件的字符串"
             #result赋值
             self.textResult.setText(result)
         else:
