@@ -37,9 +37,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 dt = datetime.datetime.fromtimestamp(float(timestampValue));
                 print dt
                 self.dateTimeEdit.setDateTime(dt)      
-            except Exception, x:
+            except Exception, e:
                 self.lblMessage.setText(u"转换时间错误")
-                print x
+                print e
                 
         
         
@@ -47,7 +47,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     @pyqtSignature("bool")
     def on_btnConvert2_clicked(self, checked):
         """
-        Slot documentation goes here.
+        北京时间转换为时间戳
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        datetimeValue=self.dateTimeEdit.dateTime().toPyDateTime()
+        try:
+            print datetimeValue.timetuple()
+            timestamp=time.mktime(datetimeValue.timetuple())
+            timestamp=long(timestamp)
+            self.txtTimestamp.setText(str(timestamp))
+        except Exception, e:
+                self.lblMessage.setText(u"转换时间错误")
+                print e
+            
