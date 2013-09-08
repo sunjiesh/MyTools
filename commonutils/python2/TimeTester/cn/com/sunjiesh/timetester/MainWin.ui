@@ -17,10 +17,10 @@
    <widget class="QWidget" name="formLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>10</y>
       <width>411</width>
-      <height>146</height>
+      <height>149</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
@@ -46,7 +46,7 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QTextEdit" name="txtTimestamp1">
+      <widget class="QTextEdit" name="txtTimestamp">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -64,66 +64,24 @@
        </property>
       </widget>
      </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QLabel" name="lblMessage">
+       <property name="text">
+        <string>提示消息</string>
+       </property>
+      </widget>
+     </item>
      <item row="2" column="1">
-      <widget class="QTextBrowser" name="txtTime1">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>20</height>
-        </size>
+      <widget class="QDateTimeEdit" name="dateTimeEdit">
+       <property name="displayFormat">
+        <string>yyyy-MM-dd HH:mm:ss</string>
        </property>
       </widget>
      </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="formLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>140</y>
-      <width>411</width>
-      <height>142</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout_2">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>北京时间</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Unix时间戳</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
+     <item row="3" column="1">
       <widget class="QPushButton" name="btnConvert2">
        <property name="text">
         <string>北京时间转Unix时间戳</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QTextEdit" name="txtTime2">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>20</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QTextBrowser" name="txtTimestamp2">
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>20</height>
-        </size>
        </property>
       </widget>
      </item>

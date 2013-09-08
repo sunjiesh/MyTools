@@ -9,6 +9,9 @@ from PyQt4.QtCore import pyqtSignature
 
 from Ui_MainWin import Ui_MainWindow
 
+import datetime
+import time
+
 class MainWindow(QMainWindow, Ui_MainWindow):
     """
     Class documentation goes here.
@@ -23,10 +26,23 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     @pyqtSignature("bool")
     def on_btnConvert1_clicked(self, checked):
         """
-        Slot documentation goes here.
+        时间戳转换成北京时间，读取时间戳，如果有值，则生成时间，如果没有
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        timestampValue=self.txtTimestamp.toPlainText()
+        if timestampValue=="":
+            self.lblMessage.setText(u"时间戳为空")
+        else:
+            print timestampValue
+            try:
+                dt = datetime.datetime.fromtimestamp(float(timestampValue));
+                print dt
+                self.dateTimeEdit.setDateTime(dt)      
+            except Exception, x:
+                self.lblMessage.setText(u"转换时间错误")
+                print x
+                
+        
+        
     
     @pyqtSignature("bool")
     def on_btnConvert2_clicked(self, checked):
