@@ -22,11 +22,23 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         QMainWindow.__init__(self, parent)
         self.setupUi(self)
+        #初始化时间
+        dt= datetime.datetime.now()
+        self.dateTimeEdit.setDateTime(dt)
+        
+        self.datetimeToTimestamp()
+        self.timestampToDatetime()
     
     @pyqtSignature("bool")
     def on_btnConvert1_clicked(self, checked):
         """
         时间戳转换成北京时间，读取时间戳，如果有值，则生成时间，如果没有
+        """
+        self.timestampToDatetime()
+        
+    def timestampToDatetime(self):
+        """
+            时间戳转换成北京时间，读取时间戳，如果有值，则生成时间，如果没有
         """
         timestampValue=self.txtTimestamp.toPlainText()
         if timestampValue=="":
@@ -49,6 +61,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         北京时间转换为时间戳
         """
+        self.datetimeToTimestamp()
+                
+    def datetimeToTimestamp(self):
         datetimeValue=self.dateTimeEdit.dateTime().toPyDateTime()
         try:
             print datetimeValue.timetuple()
