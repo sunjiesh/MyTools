@@ -59,7 +59,10 @@ class WallpaperChange:
         paramDict={}
         
         #read config file
-        configFile=open("config.cfg",mode="r",encoding="utf-8")
+        configFilePath=os.path.dirname(__file__)
+        configFilePath=configFilePath+"/config.cfg"
+        print(configFilePath)
+        configFile=open(configFilePath,mode="r",encoding="utf-8")
         for line in configFile:
             line=line[:]
             param=line.split("=")
