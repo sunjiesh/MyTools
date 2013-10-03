@@ -47,7 +47,7 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string>Input</string>
          </property>
         </widget>
        </item>
@@ -67,16 +67,16 @@
        <item>
         <layout class="QFormLayout" name="formLayout">
          <item row="0" column="0">
-          <widget class="QRadioButton" name="radioButton">
+          <widget class="QRadioButton" name="radioEncoder">
            <property name="text">
-            <string>RadioButton</string>
+            <string>Encoder</string>
            </property>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QRadioButton" name="radioButton_2">
+          <widget class="QRadioButton" name="radioDecoder">
            <property name="text">
-            <string>RadioButton</string>
+            <string>Decoder</string>
            </property>
           </widget>
          </item>
@@ -95,7 +95,7 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string>Output</string>
          </property>
         </widget>
        </item>
@@ -115,16 +115,16 @@
           <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
          </property>
          <item row="1" column="0">
-          <widget class="QRadioButton" name="radioButton_3">
+          <widget class="QRadioButton" name="radioANSI">
            <property name="text">
-            <string>RadioButton</string>
+            <string>ANSI</string>
            </property>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QRadioButton" name="radioButton_4">
+          <widget class="QRadioButton" name="radioUTF8">
            <property name="text">
-            <string>RadioButton</string>
+            <string>UTF8</string>
            </property>
           </widget>
          </item>
