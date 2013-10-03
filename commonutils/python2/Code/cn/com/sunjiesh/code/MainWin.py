@@ -88,7 +88,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     outputStr=urllib.urlencode(m)
                     outputStr=outputStr[1:]
                 elif operaMethod=="decode":
-                    outputStr="a".encode("gbk")
+                    outputStr=urllib.unquote(inputStr).decode(charset)
             except Exception, e:
                 print e
                 outputStr=u"convert error"
