@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file '/home/tom/workspace/MyPythonApplicationA/commonutils-for-python/commonutils/python2/Code/cn/com/sunjiesh/code/MainWin.ui'
 #
-# Created: Thu Oct  3 21:13:12 2013
+# Created: Thu Oct  3 21:52:08 2013
 #      by: PyQt4 UI code generator 4.10
 #
 # WARNING! All changes made in this file will be lost!
@@ -48,7 +48,7 @@ class Ui_MainWindow(object):
         self.label.setSizePolicy(sizePolicy)
         self.label.setObjectName(_fromUtf8("label"))
         self.verticalLayout_9.addWidget(self.label)
-        self.txtInput = QtGui.QPlainTextEdit(self.horizontalLayoutWidget)
+        self.txtInput = QtGui.QTextEdit(self.horizontalLayoutWidget)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -72,6 +72,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setMargin(0)
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
         self.radioEncode = QtGui.QRadioButton(self.horizontalLayoutWidget_2)
+        self.radioEncode.setChecked(True)
         self.radioEncode.setObjectName(_fromUtf8("radioEncode"))
         self.horizontalLayout.addWidget(self.radioEncode)
         self.radioDecode = QtGui.QRadioButton(self.horizontalLayoutWidget_2)
@@ -89,7 +90,7 @@ class Ui_MainWindow(object):
         self.label_2.setSizePolicy(sizePolicy)
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.verticalLayout_10.addWidget(self.label_2)
-        self.txtOutput = QtGui.QPlainTextEdit(self.horizontalLayoutWidget)
+        self.txtOutput = QtGui.QTextEdit(self.horizontalLayoutWidget)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -112,6 +113,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setMargin(0)
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
         self.radioANSI = QtGui.QRadioButton(self.horizontalLayoutWidget_3)
+        self.radioANSI.setChecked(True)
         self.radioANSI.setObjectName(_fromUtf8("radioANSI"))
         self.horizontalLayout_2.addWidget(self.radioANSI)
         self.radioUTF8 = QtGui.QRadioButton(self.horizontalLayoutWidget_3)

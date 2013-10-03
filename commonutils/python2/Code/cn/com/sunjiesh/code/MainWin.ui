@@ -52,7 +52,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPlainTextEdit" name="txtInput">
+        <widget class="QTextEdit" name="txtInput">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -96,6 +96,9 @@
              <property name="text">
               <string>Encode</string>
              </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
             </widget>
            </item>
            <item>
@@ -127,7 +130,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPlainTextEdit" name="txtOutput">
+        <widget class="QTextEdit" name="txtOutput">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -167,6 +170,9 @@
             <widget class="QRadioButton" name="radioANSI">
              <property name="text">
               <string>ANSI</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
