@@ -49,7 +49,6 @@ class Dialog(QDialog, Ui_Dialog):
         if event.buttons() & Qt.LeftButton:  
             pointX = event.globalX()
             pointY = event.globalY()
-            print pointX
             # img is QImage type
             img = QPixmap.grabWindow(
                     QApplication.desktop().winId()).toImage()
@@ -60,16 +59,14 @@ class Dialog(QDialog, Ui_Dialog):
             blue10 = QtGui.qBlue(rgb)
             color10="("+str(red10)+","+str(green10)+","+str(blue10)+")"
             #十六进制
-            red16=str(hex(red10))[2]
-            if(len(red16)==1):
-                red16="0"+red16
+            #print str(hex(red10))
+            red16=str(hex(red10))[2:]
             green16=str(hex(green10))[2]
-            if(len(green16)==1):
-                green16="0"+green16
-            blue16=str(hex(blue10))[2]
-            if(len(blue16)==1):
-                blue16="0"+blue16
+            blue16=str(hex(blue10))[2:]
             color16=red16+green16+blue16
+            #print color16
+            print "(%s,%s) = %s (%s,%s,%s)" % (pointX, pointY, color16,red10, green10, blue10)
+            self.label.setText("(%s,%s) = %s (%s,%s,%s)" % (pointX, pointY, color16,red10, green10, blue10))
             
 
 if __name__ == "__main__":
