@@ -44,7 +44,7 @@ class Dialog(QDialog, Ui_Dialog):
   
     def mouseMoveEvent(self,event): 
         """
-            鼠标移动需要把鼠标的XY值读取，通过调用PIL实现
+            鼠标移动需要把鼠标的XY值读取
         """
         if event.buttons() & Qt.LeftButton:  
             pointX = event.globalX()
