@@ -12,6 +12,9 @@ class Form(QWidget):
         self.textPattern.setObjectName("textPattern")
         self.textResult=QTextBrowser()
         self.textResult.setObjectName("textaResult")
+        self.btnRun = QPushButton()
+        self.btnRun.setObjectName("btnRun")
+
 
         #Layout
         self.centralWidget = QWidget()
@@ -22,10 +25,12 @@ class Form(QWidget):
         self.formLayout = QFormLayout(self.formLayoutWidget)
         self.formLayout.setFieldGrowthPolicy(QFormLayout.AllNonFixedFieldsGrow)
         self.formLayout.setObjectName("formLayout")
+        self.btnRun.setText("Run")
 
         self.formLayout.setWidget(0, QFormLayout.FieldRole, self.textSource)
         self.formLayout.setWidget(1, QFormLayout.FieldRole, self.textPattern)
-        self.formLayout.setWidget(2, QFormLayout.FieldRole, self.textResult)
+        self.formLayout.setWidget(2, QFormLayout.FieldRole, self.btnRun)
+        self.formLayout.setWidget(3, QFormLayout.FieldRole, self.textResult)
         self.setLayout(self.formLayout)
 
     def on_btnRun_clicked(self):
