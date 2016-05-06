@@ -11,15 +11,29 @@ class Form(QWidget):
         self.textPattern.setObjectName("textPattern")
         self.textResult=QTextBrowser()
         self.textResult.setObjectName("textaResult")
-        formLayout=QFormLayout()
-        formLayout.addWidget(self.textSource)
-        formLayout.addWidget(self.textPattern)
-        #formLayout.addWidget(self.textResult)
 
-        mainLayout = QGridLayout()
-        mainLayout.addLayout(formLayout, 0, 1)
-        self.setLayout(mainLayout)
-        self.setWindowTitle("RegexTester")
+        self.centralWidget = QWidget()
+        self.centralWidget.setObjectName("centralWidget")
+        self.formLayoutWidget = QWidget(self.centralWidget)
+        self.formLayoutWidget.setGeometry(QRect(0, -10, 801, 601))
+        self.formLayoutWidget.setObjectName("formLayoutWidget")
+        self.formLayout = QFormLayout(self.formLayoutWidget)
+        self.formLayout.setFieldGrowthPolicy(QFormLayout.AllNonFixedFieldsGrow)
+        self.formLayout.setObjectName("formLayout")
+
+
+        self.formLayout.setWidget(0, QFormLayout.FieldRole, self.textSource)
+        self.formLayout.setWidget(1, QFormLayout.FieldRole, self.textPattern)
+        self.formLayout.setWidget(2, QFormLayout.FieldRole, self.textResult)
+
+        self.setLayout(self.formLayout)
+
+
+
+        #mainLayout = QGridLayout()
+        #mainLayout.addLayout(formLayout, 0, 1)
+        #self.setLayout(mainLayout)
+        #self.setWindowTitle("RegexTester")
 
 if __name__ == '__main__':
     import sys
