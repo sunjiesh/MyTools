@@ -10,7 +10,10 @@ from PyQt5.QtWidgets import *
 class Form(QWidget):
     def __init__(self, parent=None):
         super(Form, self).__init__(parent)
+        self.initUI()
 
+
+    def initUI(self):
         #Compements
         self.labelSource=QLabel()
         self.labelSource.setObjectName("labelSource")
@@ -35,7 +38,6 @@ class Form(QWidget):
         self.centralWidget = QWidget()
         self.centralWidget.setObjectName("centralWidget")
         self.formLayoutWidget = QWidget(self.centralWidget)
-        self.formLayoutWidget.setGeometry(QRect(0, -10, 801, 601))
         self.formLayoutWidget.setObjectName("formLayoutWidget")
         self.formLayout = QFormLayout(self.formLayoutWidget)
         self.formLayout.setFieldGrowthPolicy(QFormLayout.AllNonFixedFieldsGrow)
@@ -53,6 +55,8 @@ class Form(QWidget):
         self.formLayout.setWidget(6, QFormLayout.FieldRole, self.textResult)
 
         self.setLayout(self.formLayout)
+
+        self.setGeometry(300, 300, 800, 500)
 
     def on_btnRun_clicked(self):
         """
