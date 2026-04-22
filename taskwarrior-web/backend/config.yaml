@@ -1,0 +1,22 @@
+jwt:
+  secret: "change-me-in-production"
+  expires_minutes: 10
+
+auth:
+  username: "admin"
+  password: "admin123"
+
+taskwarrior:
+  task_data_dir: "~/.task"
+  # Taskwarrior 默认 priority(UDA) 排序：uda.priority.values=H,M,L,
+  # 这里同样用“从高到低”的顺序表达；空字符串表示“无优先级”
+  priority_values_desc:
+    - "H"
+    - "M"
+    - "L"
+    - ""
+
+server:
+  cors_origins:
+    - "http://localhost:5173"
+
