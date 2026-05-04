@@ -1,0 +1,10 @@
+{
+  "image_dir": "~/Pictures/wallpapers",
+  "provider": "bing",
+  "market": "zh-CN",
+  "interval_seconds": 3600,
+  "min_width": 2560,
+  "min_height": 1440,
+  "keep_last_n": 30
+}
+
